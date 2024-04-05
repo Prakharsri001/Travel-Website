@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Destination";
+    Layout = "~/Views/Shared/Generalmaster.cshtml";
+}
+@using System.Data;
+@using System.Data.SqlClient;
+@using travels.Models;
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="co-sm-12">
+                
+                    @{
+                        DBManager db = new DBManager();
+                        string cmd = "select * from tbl_destination";
+                        DataTable dt = db.GetAllRecord(cmd);
+                        if (dt.Rows.Count > 0)
+                        {
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+
+
+                                <div class="col-sm-4">
+                                    <div class="card" style="width:100%; border-radius:10px; box-shadow:0 4px 8px 0 
+                    rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);margin:10px">
+
+                                        <img class="card-img-top" src="/Content/Photo/@dt.Rows[i]["Photo"]" width="95%" height="180" alt="card image cap" style="margin:10px" />
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="margin:10px">@dt.Rows[i]["Place_name"]</h5>
+                                            <p class="card-text" style="margin:10px">
+                                                @dt.Rows[i]["description"]
+                                            </p>
+                                            <a href="/user/userform" class="btn btn-primary" style="margin:30px;margin-bottom:5px">Start Journey</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <h2 class="text-center">No photo found</h2>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        
+</body>

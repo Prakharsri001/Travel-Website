@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/Generalmaster.cshtml";
+}
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/css/hover-min.css" rel="stylesheet" />
+<script src="~/Content/js/jquery.js"></script>
+<script src="~/Content/js/bootstrap.min.js"></script>
+<style>
+    body {
+        background-image: url(../../Content/image/aa4.jpg);
+         background-attachment:fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body>
+    <div class="container" style="margin-top:120px;margin-bottom:120px">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form action="/Home/ContactUs" method="post" enctype="multipart/form-data">
+                    <h2 style="text-align:center">ContactUs</h2>
+                    <hr style="background:teal;height:3px" />
+                    Enter Your Name
+                    <input type="text" class="form-control" name="txtname" />
+
+                    Enter your Email Address
+                    <input type="email" class="form-control" name="txtemail" />
+                    Enter Your Mobile Number
+                    <input type="number" class="form-control" name="txtmobile" />
+                    How can We Help?
+                    <textarea class="form-control" name="txtmsg"></textarea>
+                    <br />
+
+                    <button type="submit" class="btn-group btn-group-justified">Submit</button>
+                    <hr />
+                </form>
+                <div class="visme_d" data-title="Untitled Project" data-url="jwoweee1-untitled-project?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="46504"></div>
+                <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+            </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+    </div>
+    
+</body>
+

@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Addplace";
+    Layout = "~/Views/Shared/manager.cshtml";
+}
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/css/hover-min.css" rel="stylesheet" />
+<script src="~/Content/js/jquery.js"></script>
+<script src="~/Content/js/bootstrap.min.js"></script>
+
+
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("/Content/image/aa4.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body>
+
+
+
+
+    <div class="container" style="margin-top:120px;margin-bottom:120px">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" style="box-shadow:1px 1px 2px 1px black;">
+                <form action="/manager/Addplace" method="post" enctype="multipart/form-data">
+                    <br />
+
+                    <h2 style="text-align:center">Place Adding Page</h2>
+                    <hr style="background:teal;height:3px" />
+
+                    Enter Your place
+                    <input type="text" class="form-control" name="txtname" />
+                    Enter your description
+                    <textarea class="form-control" name="txtdec"></textarea>
+                    select Picture
+                    <input type="file" class="form-control" name="fupic" />
+                    <br />
+
+                    <button type="submit" class="btn-group btn-group-justified">Add</button>
+                    <br />
+                </form>
+            </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+    </div>
+
+
+
+</body>

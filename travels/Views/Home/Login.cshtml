@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Generalmaster.cshtml";
+}
+
+
+  <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/css/hover-min.css" rel="stylesheet" />
+<script src="~/Content/js/jquery.js"></script>
+<script src="~/Content/js/bootstrap.min.js"></script>
+<style>
+    body {
+        background-image: url(../../Content/image/aa4.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body>
+    <div class="container" style="margin-top:120px;margin-bottom:120px">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form action="/Home/Login" method="post" >
+                    <h2 style="text-align:center">Login form</h2>
+                    <hr style="background:teal;height:3px" />
+                    Enter Your Userid
+                    <input type="text" class="form-control" name="txtid" />
+                    Enter Your Password
+                    <input type="password" class="form-control" name="txtpass" />
+                    <br />
+
+                    <button type="submit" class="btn-group btn-group-justified">LOGIN</button>
+                    <br />
+                    <button type="submit">
+                        <a href="/Home/signup" class="btn-group btn-group-justified">SIGNUP</a>
+                    </button>
+                    <hr />
+                </form>
+            </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F73D9222-5EAC-4D10-8A0D-C6734CAFEA6B}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>travels</RootNamespace>
+    <AssemblyName>travels</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\managerController.cs" />
+    <Compile Include="Controllers\userController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\akash.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\hover-min.css" />
+    <Content Include="Content\css\hover.css" />
+    <Content Include="Content\css\jquery-ui.theme.css" />
+    <Content Include="Content\css\jquery-ui.theme.min.css" />
+    <Content Include="Content\css\star rating.html" />
+    <Content Include="Content\fonts\css\bootstrap-theme.min.css" />
+    <Content Include="Content\fonts\css\bootstrap.min.css" />
+    <Content Include="Content\fonts\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\css\hover.css" />
+    <Content Include="Content\fonts\font-awesone\ajax.aspnetcdn.com\ajax\jquery.validate\1.13.1\jquery.validate.min.js" />
+    <Content Include="Content\fonts\font-awesone\ajax.googleapis.com\ajax\libs\jquery\1.11.3\jquery.min.js" />
+    <Content Include="Content\fonts\font-awesone\backblue.gif" />
+    <Content Include="Content\fonts\font-awesone\cdn.fusionads.net\fusion5482.js" />
+    <Content Include="Content\fonts\font-awesone\cdn.jsdelivr.net\algoliasearch.helper\2.9.1\algoliasearch.helper.min.js" />
+    <Content Include="Content\fonts\font-awesone\cdn.jsdelivr.net\algoliasearch\3.13.1\algoliasearch.jquery.min.js" />
+    <Content Include="Content\fonts\font-awesone\cdn.jsdelivr.net\backbonejs\1.2.2\backbone-min.js" />
+    <Content Include="Content\fonts\font-awesone\cdn.jsdelivr.net\jsdelivr-rum\1.5\jsdelivr-rum.min.js" />
+    <Content Include="Content\fonts\font-awesone\cdn.jsdelivr.net\underscorejs\1.8.3\underscore-min.js" />
+    <Content Include="Content\fonts\font-awesone\connect.facebook.net\en_US\fbevents.js" />
+    <Content Include="Content\fonts\font-awesone\cookies.txt" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\715simtOAGL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\71e4BRlSOML._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\71pEdMm86PL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\812ghxTnRrL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\817wsSl9ScL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\819SDvnOv8L._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81AihmIpmUL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81AqlTK02KL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81fPcfH8KkL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81MMb-JjRNL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81mzUUTrfYL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81nYbDVxo8L._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81QUekkdt7L._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81U+SAV23IL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81wt4C6gBlL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\ecx.images-amazon.com\images\I\81Y2BFVgUAL._UX679_.jpg" />
+    <Content Include="Content\fonts\font-awesone\fade.gif" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\ico\favicon.ico" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\js\bootstrap-2.3.1.min.js" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\js\site.js" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\js\ZeroClipboard-1.1.7.min.js" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\accessibility\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\fonts\glyphicons-halflings-regular-5.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\pygments.css" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\css\site.css" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome\fonts\fontawesome-webfont5b62.svg" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\ico\favicon.ico" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\img\logo-themeisle.png" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\img\logo-wpbeginner.png" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\js\search.js" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\js\site.js" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\cheatsheet\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\community\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\examples\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\examples\path\to\settings.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\examples\path\to\shopping\cart.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\get-started\get-started-cdn.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\get-started\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\500px\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\adjust\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\adn\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\align-center\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\align-justify\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\align-left\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\align-right\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\amazon\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\ambulance\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\american-sign-language-interpreting\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\anchor\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\android\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angellist\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-double-down\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-double-left\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-double-right\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-double-up\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-down\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-left\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-right\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\angle-up\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\apple\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\archive\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\area-chart\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-down\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-left\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-o-down\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-o-left\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-o-right\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-o-up\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-right\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-circle-up\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-down\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-left\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-right\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrow-up\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrows-alt\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrows-h\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrows-v\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\arrows\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\assistive-listening-systems\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\asterisk\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\at\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\audio-description\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\backward\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\balance-scale\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\ban\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bar-chart\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\barcode\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bars\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\battery-empty\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\battery-full\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\battery-half\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\battery-quarter\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\battery-three-quarters\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bed\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\beer\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\behance-square\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\behance\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bell-o\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bell-slash-o\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bell-slash\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bell\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bicycle\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\binoculars\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\birthday-cake\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bitbucket-square\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bitbucket\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\black-tie\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\blind\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bluetooth-b\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bluetooth\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bold\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\icon\bolt\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\index.html" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\index1c42.html" />
+    <Content Include="Content\fonts\font-awesone\hts-log.txt" />
+    <Content Include="Content\fonts\font-awesone\index.html" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\js\bootstrap.js" />
+    <Content Include="Content\fonts\js\bootstrap.min.js" />
+    <Content Include="Content\fonts\js\jquery-2.1.0.min.js" />
+    <Content Include="Content\fonts\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\image\a1.jpeg" />
+    <Content Include="Content\image\aa1.jpg" />
+    <Content Include="Content\image\aa2.jpg" />
+    <Content Include="Content\image\aa3.jpg" />
+    <Content Include="Content\image\aa4.jpg" />
+    <Content Include="Content\image\aa5.jpg" />
+    <Content Include="Content\image\aa6.jpg" />
+    <Content Include="Content\image\Bengaluru.jpg" />
+    <Content Include="Content\image\Celibrity_2_58c50d78c0.mp4" />
+    <Content Include="Content\image\economic.png" />
+    <Content Include="Content\image\Goa.jpg" />
+    <Content Include="Content\image\HARIDWAR.jpg" />
+    <Content Include="Content\image\hindu.png" />
+    <Content Include="Content\image\images.png" />
+    <Content Include="Content\image\Jaipur.jpg" />
+    <Content Include="Content\image\light-logo-img.png" />
+    <Content Include="Content\image\maldevs.jpeg" />
+    <Content Include="Content\image\Mumbai.jpg" />
+    <Content Include="Content\image\nascom.png" />
+    <Content Include="Content\image\p1.png" />
+    <Content Include="Content\image\p2.png" />
+    <Content Include="Content\image\p3.png" />
+    <Content Include="Content\image\p4.png" />
+    <Content Include="Content\image\pic1.png" />
+    <Content Include="Content\image\pic2.png" />
+    <Content Include="Content\image\qt1.png" />
+    <Content Include="Content\image\t1.png" />
+    <Content Include="Content\image\t2.png" />
+    <Content Include="Content\image\t3.png" />
+    <Content Include="Content\image\t4.png" />
+    <Content Include="Content\image\t5.png" />
+    <Content Include="Content\image\t6.png" />
+    <Content Include="Content\image\t7.png" />
+    <Content Include="Content\image\t8.png" />
+    <Content Include="Content\image\t9.png" />
+    <Content Include="Content\image\testimo.mp4" />
+    <Content Include="Content\image\toi.png" />
+    <Content Include="Content\image\Varanasi.jpg" />
+    <Content Include="Content\image\viddeo1.mp4" />
+    <Content Include="Content\image\z1.png" />
+    <Content Include="Content\image\z2.png" />
+    <Content Include="Content\image\z3.png" />
+    <Content Include="Content\image\z4.png" />
+    <Content Include="Content\js\akash.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-2.1.0.min.js" />
+    <Content Include="Content\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\js\jquery-ui.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\font-awesome.zip" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome-4.6.3.zip" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome\fonts\fontawesome-webfont5b62.eot" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome\fonts\fontawesome-webfont5b62.ttf" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome\fonts\fontawesome-webfont5b62.woff" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome\fonts\fontawesome-webfont5b62.woff2" />
+    <Content Include="Content\fonts\font-awesone\fontawesome.io\assets\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\fonts\font-awesone\RahulSoni Fa Fa Icon.pdf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Generalmaster.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Destination.cshtml" />
+    <Content Include="Views\Home\Tours.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Shared\manager.cshtml" />
+    <Content Include="Views\manager\Index.cshtml" />
+    <Content Include="Views\user\userform.cshtml" />
+    <Content Include="Views\Shared\userPage1.cshtml" />
+    <Content Include="Views\user\Index.cshtml" />
+    <Content Include="Views\Home\testimonials.cshtml" />
+    <Content Include="Views\Home\Signup.cshtml" />
+    <Content Include="Views\manager\Addplace.cshtml" />
+    <Content Include="Views\manager\Deleteplace.cshtml" />
+    <Content Include="Views\user\Review.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\fonts\font-awesone\assets-cdn.github.com\assets\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\css\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\font-awesome\css\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\cheatsheet\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\community\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\examples\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\get-started\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\icons\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\license\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\whats-new\" />
+    <Folder Include="Content\fonts\font-awesone\fontawesome.io\icon\bomb\" />
+    <Folder Include="Content\Photo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50072</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49983/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

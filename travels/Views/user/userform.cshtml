@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "userform";
+    Layout = "~/Views/Shared/userPage1.cshtml";
+}
+
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/css/hover-min.css" rel="stylesheet" />
+<script src="~/Content/js/jquery.js"></script>
+<script src="~/Content/js/bootstrap.min.js"></script>
+<style>
+    body {
+        background-image: url(../../Content/image/aa4.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body>
+    <div class="container" style="margin-top:120px;margin-bottom:120px">
+        <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form action="/Home/userform" method="post" enctype="multipart/form-data">
+                    <h2 style="text-align:center">Persnoal Details</h2>
+                    <hr style="background:teal;height:3px" />
+                    Enter Your Full Name
+                    <input type="text" class="form-control" name="txtname" />
+
+                    Enter your Email Address
+                    <input type="email" class="form-control" name="txtemail" />
+                    Enter Your Mobile Number
+                    <input type="number" class="form-control" name="txtmobile" />
+                    Date When You Start Travel
+                    <input type="date" class="form-control" name="txtD1" />
+
+                    Date When You Finish Travel
+                    <input type="date" class="form-control" name="txtD2" />
+                    Destination Chooes By You
+                    <input type="text" class="form-control" readonly name="txtDES" />
+                    Your Starting Place
+                    <input type="text" class="form-control" name="txtst" />
+                    <div class="col-sm-1">
+                        Adult
+                        <input type="number" class="form-control" name="txtadult" style="width:100px" />
+                    </div>
+                    <div class="col-sm-2" style="margin-left:180px">
+                        Childreen
+                        <input type="number" class="form-control" name="txtchild" style="width:100px" />
+                    </div>
+         
+
+            <button type="submit" class="btn-group btn-group-justified" style="margin-top:63px">Next Page</button>
+
+            </form>
+        </div>
+            <div class="col-sm-4"></div>
+
+        </div>
+    </div>
+</body>
