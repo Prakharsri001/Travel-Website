@@ -395,6 +395,15 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\z\Screenshot %28131%29.png" />
+    <Content Include="Content\z\Screenshot %28132%29.png" />
+    <Content Include="Content\z\Screenshot %28133%29.png" />
+    <Content Include="Content\z\Screenshot %28134%29.png" />
+    <Content Include="Content\z\Screenshot %28135%29.png" />
+    <Content Include="Content\z\Screenshot %28137%29.png" />
+    <Content Include="Content\z\Screenshot %28138%29.png" />
+    <Content Include="Content\z\Screenshot %28139%29.png" />
+    <Content Include="Content\z\Screenshot %28140%29.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\fonts\font-awesone\fontawesome.io\3.2.1\assets\font-awesome.zip" />
@@ -457,6 +466,7 @@
     <Content Include="Views\manager\Addplace.cshtml" />
     <Content Include="Views\manager\Deleteplace.cshtml" />
     <Content Include="Views\user\Review.cshtml" />
+    <Content Include="Views\Home\Publish.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
