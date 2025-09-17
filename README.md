@@ -1,1 +1,1 @@
-If you want see website click.....https://prakharsri001.github.io/Travel-Website/home/index.html
+If you want see website click.....https://prakharsri001.github.io/Travel-Website/travels/Views/home/index.html
