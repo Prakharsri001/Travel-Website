@@ -1,1 +1,1 @@
-for project GO TO traves then Content then folder 'Z' there add some screenshot.
+for project GO TO travels then Content then folder 'Z' there add some screenshot.
